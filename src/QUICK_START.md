@@ -1,53 +1,57 @@
-# 🚀 Guia Rápido - Portfolio Fabio Leonardo
+# 🚀 Guia Rápido — Portfólio (Fabio Leonardo)
 
-## 📍 Navegação Rápida
+Este arquivo é um “atalho” para eu (e qualquer pessoa que baixar o projeto) encontrar rápido onde editar cada parte do site, sem ficar procurando arquivo por arquivo.
 
-### Onde encontrar cada coisa?
+---
 
-| Preciso de... | Vá para... |
-|---------------|------------|
-| Editar navbar/menu | `/components/layout/Navbar.tsx` |
-| Mudar itens do menu | `/constants/menu.ts` |
-| Editar seção inicial | `/components/sections/Hero.tsx` |
-| Editar rodapé | `/components/layout/Footer.tsx` |
-| Editar botão de contato | `/components/layout/ContactBubble.tsx` |
-| Editar sobre mim | `/components/About.tsx` |
-| Editar projetos | `/components/Projects.tsx` |
-| Editar skills | `/components/Skills.tsx` |
-| Adicionar animação | `/constants/animations.ts` |
-| Adicionar tipo | `/types/index.ts` |
-| Estilos globais | `/styles/globals.css` |
+## 📍 Onde editar cada coisa
 
-## ⚡ Tarefas Comuns
+| Preciso mexer em... | Arquivo |
+|---|---|
+| Navbar / menu (layout do topo) | `src/components/layout/Navbar.tsx` |
+| Itens do menu (links/IDs) | `src/constants/menu.ts` |
+| Seção inicial (Hero) | `src/components/sections/Hero.tsx` |
+| Rodapé (Footer) | `src/components/layout/Footer.tsx` |
+| Botão/bolha de contato | `src/components/layout/ContactBubble.tsx` |
+| Seção “Sobre” | `src/components/sections/About.tsx` |
+| Seção “Projetos” | `src/components/sections/Projects.tsx` |
+| Seção “Skills” | `src/components/sections/Skills.tsx` |
+| Animações (motion) | `src/constants/animations.ts` |
+| Tipos TypeScript | `src/types/index.ts` |
+| Estilos globais | `src/styles/globals.css` |
 
-### 1. Adicionar Item ao Menu
+---
 
-**Arquivo:** `/constants/menu.ts`
+## ⚡ Tarefas comuns
 
-```typescript
-export const MENU_ITEMS: MenuItem[] = [
+### 1) Adicionar um item no menu
+
+📌 Arquivo: `src/constants/menu.ts`
+
+```ts
+export const MENU_ITEMS = [
   // ... itens existentes
-  { name: 'NOVO', href: '#novo' }, // ← adicione aqui
+  { name: 'NOVO', href: '#novo' }, // adicione aqui
 ];
 ```
+2) Alterar cores do tema
 
-### 2. Mudar Cores do Tema
+📌 Arquivo: src/styles/globals.css
 
-**Arquivo:** `/styles/globals.css`
-
-```css
+Procure pelas variáveis e troque os valores:
+```
 :root {
-  --color-neon-green: #00ff9f;  /* ← mudar aqui */
-  --color-purple: #8a2be2;       /* ← mudar aqui */
-  --color-purple-light: #b300ff; /* ← mudar aqui */
+  --color-neon-green: #00ff9f;
+  --color-purple: #8a2be2;
+  --color-purple-light: #b300ff;
 }
 ```
+3) Adicionar / atualizar um projeto
 
-### 3. Adicionar Novo Projeto
+📌 Arquivo: src/components/sections/Projects.tsx
 
-**Arquivo:** `/components/Projects.tsx`
-
-```typescript
+Procure a lista de projetos e adicione um novo objeto:
+```
 const projects = [
   // ... projetos existentes
   {
@@ -55,35 +59,31 @@ const projects = [
     description: 'Descrição do projeto...',
     stack: ['Tech1', 'Tech2'],
     status: 'LIVE',
-    github: '#',
+    github: 'https://github.com/seu-usuario/seu-repo',
     highlight: 'Destaque principal',
   },
 ];
 ```
+4) Atualizar contatos (Email / WhatsApp / GitHub / LinkedIn)
 
-### 4. Atualizar Informações de Contato
-
-**Arquivo:** `/components/layout/ContactBubble.tsx`
-
-```typescript
-const CONTACTS: ContactInfo[] = [
+📌 Arquivo: src/components/layout/ContactBubble.tsx
+```
+const CONTACTS = [
   {
-    icon: Mail,
     label: 'Email',
-    value: 'seu@email.com',        // ← mudar aqui
-    href: 'mailto:seu@email.com',  // ← mudar aqui
+    value: 'seu@email.com',
+    href: 'mailto:seu@email.com',
   },
   // ... outros contatos
 ];
 ```
 
-### 5. Adicionar Nova Skill
+5) Adicionar uma nova skill
 
-**Arquivo:** `/components/Skills.tsx`
+📌 Arquivo: src/components/sections/Skills.tsx
 
-Procure por `categories` e adicione:
-
-```typescript
+Procure por categories e adicione um novo bloco:
+```
 {
   category: 'Nova Categoria',
   icon: IconName,
@@ -91,129 +91,120 @@ Procure por `categories` e adicione:
 }
 ```
 
-### 6. Mudar Links Sociais
+6) Atualizar links sociais
 
-**Arquivo:** `/components/CallToAction.tsx`
-
-```typescript
+📌 Arquivo: src/components/sections/CallToAction.tsx
+```
 const socialLinks = [
-  { 
-    icon: Github, 
-    href: 'https://github.com/seu-usuario',  // ← mudar aqui
-    label: 'GitHub' 
+  {
+    icon: Github,
+    href: 'https://github.com/seu-usuario',
+    label: 'GitHub',
   },
   // ... outros links
 ];
 ```
 
-## 🎨 Customizar Estética Cyberpunk
+🎨 Estética (cyberpunk)
 
-### Efeitos Disponíveis
-
-```html
-<!-- Neon Glow -->
-<div className="neon-green">Texto com glow verde</div>
-<div className="neon-purple">Texto com glow roxo</div>
-
-<!-- Clip Corner -->
-<div className="clip-corner">Canto cortado</div>
-
-<!-- Pulse Glow -->
-<div className="pulse-glow">Pulsando</div>
-
-<!-- Glitch Effect -->
-<div className="animate-[glitch_0.3s_infinite]">Glitch</div>
+Algumas classes úteis que eu uso no layout:
 ```
 
-### Gradientes Prontos
-
-```css
-/* Verde neon */
+<div className="neon-green">Texto com glow verde</div>
+<div className="neon-purple">Texto com glow roxo</div>
+<div className="clip-corner">Canto cortado</div>
+<div className="pulse-glow">Efeito pulsando</div>
+<div className="animate-[glitch_0.3s_infinite]">Glitch</div>
+```
+Gradientes prontos (Tailwind):
+```
 bg-gradient-to-r from-[#00ff9f] to-[#00ffcc]
-
-/* Roxo */
 bg-gradient-to-r from-[#8a2be2] to-[#b300ff]
-
-/* Mix */
 bg-gradient-to-br from-[#8a2be2] via-[#b300ff] to-[#00ff9f]
 ```
 
-## 🔧 Imports Úteis
+🔧 Imports úteis (referência rápida)
 
-```typescript
 // Animações
+```
 import { FADE_IN_UP, SCALE_IN } from './constants/animations';
-
+```
 // Menu
+```
 import { MENU_ITEMS } from './constants/menu';
-
+```
 // Tipos
+```
 import type { MenuItem, Project } from './types';
-
-// Componentes de Layout
+```
+// Layout
+```
 import { Navbar, Footer, ContactBubble } from './components/layout';
-
-// Componentes de Seção
+```
+// Seções
+```
 import { Hero } from './components/sections';
-
-// Utilitários
+```
+// Shared
+```
 import { ImageWithFallback } from './components/shared';
-
-// Ícones (Lucide)
+```
+// Ícones
+```
 import { Github, Mail, Terminal } from 'lucide-react';
-
-// Animação (Motion)
+```
+// Motion
+```
 import { motion } from 'motion/react';
 ```
 
-## 📱 Breakpoints Responsivos
-
-```typescript
-// Mobile First
+📱 Responsividade (Tailwind)
+```
+sm:  640px   (mobile landscape)
+md:  768px   (tablet)
+lg:  1024px  (desktop)
+xl:  1280px  (large desktop)
+2xl: 1536px  (4K)
+```
+Exemplo rápido (mobile first):
+```
 className="text-sm md:text-base lg:text-lg"
-
-// Breakpoints Tailwind
-sm:  640px   // Mobile landscape
-md:  768px   // Tablet
-lg:  1024px  // Desktop
-xl:  1280px  // Large desktop
-2xl: 1536px  // 4K
 ```
 
-## 🎯 Seções e IDs
+🧭 Seções e IDs
 
-| Seção | ID | Componente |
-|-------|-----|-----------|
-| Home | `#home` | `Hero.tsx` |
-| Sobre | `#sobre` | `About.tsx` |
-| Serviços | `#servicos` | `Services.tsx` |
-| Experiência | `#experiencia` | `Experience.tsx` |
-| Projetos | `#projetos` | `Projects.tsx` |
-| Skills | `#skills` | `Skills.tsx` |
-| Contato | `#contato` | `CallToAction.tsx` |
+| Seção       | ID             | Componente         |
+| ----------- | -------------- | ------------------ |
+| Home        | `#home`        | `Hero.tsx`         |
+| Sobre       | `#sobre`       | `About.tsx`        |
+| Serviços    | `#servicos`    | `Services.tsx`     |
+| Experiência | `#experiencia` | `Experience.tsx`   |
+| Projetos    | `#projetos`    | `Projects.tsx`     |
+| Skills      | `#skills`      | `Skills.tsx`       |
+| Contato     | `#contato`     | `CallToAction.tsx` |
 
-## 🐛 Debug Rápido
+🐛 Debug rápido (quando algo não funciona)
+Animação não aparece
 
-### Problema: Animação não funciona
+Confirme se motion foi importado
 
-```typescript
-// ✅ Certifique-se de importar motion
+Use viewport={{ once: true }} quando for animação ao rolar
+
 import { motion } from 'motion/react';
-
-// ✅ Use viewport once
+```
 <motion.div
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
-  viewport={{ once: true }}  // ← importante
->
+  viewport={{ once: true }}
+/>
 ```
 
-### Problema: Imagem não carrega
+Imagem não carrega
 
-```typescript
-// ✅ Use ImageWithFallback
+Use o ImageWithFallback:
+
 import { ImageWithFallback } from './components/shared';
-
+```
 <ImageWithFallback
   src="url-da-imagem"
   alt="Descrição"
@@ -221,45 +212,19 @@ import { ImageWithFallback } from './components/shared';
 />
 ```
 
-### Problema: Link não rola suavemente
+Link do menu não rola para a seção
 
-```typescript
-// ✅ Verifique se a seção tem o ID correto
-<section id="projetos"> // ← deve corresponder ao href
-
-// ✅ Verifique se está usando o handler correto
-onClick={(e) => handleScroll(e, '#projetos')}
+O href do menu precisa bater com o id da seção.
+```
+<section id="projetos" />
+// e no menu:
+{ name: 'Projetos', href: '#projetos' }
 ```
 
-## 💡 Dicas Pro
+Se você acabou de baixar o projeto e algo não estiver funcionando, o primeiro passo é rodar:
+```
+npm i
+npm run dev
+```
 
-1. **Sempre use constantes** ao invés de valores hardcoded
-2. **Extraia componentes repetidos** em subcomponentes
-3. **Use TypeScript** para prevenir erros
-4. **Teste em mobile** regularmente
-5. **Mantenha animações leves** para performance
-
-## 📚 Recursos
-
-- [Tailwind CSS Docs](https://tailwindcss.com/docs)
-- [Motion (Framer Motion) Docs](https://motion.dev/)
-- [Lucide Icons](https://lucide.dev/)
-- [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/)
-
-## 🆘 Ajuda Rápida
-
-**Problema com imports?**
-→ Verifique os barrel exports em `/components/*/index.ts`
-
-**Componente não aparece?**
-→ Certifique-se que está importado em `App.tsx`
-
-**Estilos não aplicam?**
-→ Verifique se `/styles/globals.css` está importado
-
-**TypeScript reclama?**
-→ Adicione tipos em `/types/index.ts`
-
----
-
-**💚 Código organizado, manutenção facilitada!**
+💚 Projeto organizado = manutenção mais tranquila.
