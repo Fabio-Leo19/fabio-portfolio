@@ -157,8 +157,8 @@ function NameSection() {
       </h2>
       <div className="h-[1px] w-48 mx-auto bg-gradient-to-r from-transparent via-[#8a2be2] to-transparent mb-4" />
       <p className="font-['Space_Mono'] text-base md:text-lg text-gray-400">
-        Especialista em{' '}
-        <span className="text-[#00ff9f]">Backend</span> e{' '}
+        Desenvolvedor{' '}
+        <span className="text-[#00ff9f]">Full Stack</span> e{' '}
         <span className="text-[#00ff9f]">Mobile Android</span>
         <br />
         <span className="text-[#8a2be2]">Java • Kotlin • Spring Boot • React</span>
