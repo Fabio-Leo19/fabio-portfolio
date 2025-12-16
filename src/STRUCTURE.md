@@ -204,4 +204,4 @@ Criar arquivos de constantes para:
 
 ---
 
-**Última atualização**: Dezembro 2024
+Eu preferi uma estrutura bem direta, fácil de entender e fácil de manter. Se no futuro eu quiser evoluir (ex.: separar os dados de projects/skills em arquivos próprios), dá pra fazer sem quebrar a organização atual.
