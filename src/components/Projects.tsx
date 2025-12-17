@@ -17,7 +17,7 @@ export function Projects() {
       description: 'E-commerce moderno e responsivo para venda de roupas, mochilas e aparelhos eletrônicos. Interface elegante com carrinho de compras e filtros avançados.',
       stack: ['React', 'TypeScript', 'Tailwind CSS', 'Bootstrap', 'REST API'],
       status: 'LIVE',
-      github: '#',
+      github: 'https://github.com/Fabio-Leo19/Modern-Closet.git',
       highlight: 'Design responsivo e UX otimizada',
     },
   ];

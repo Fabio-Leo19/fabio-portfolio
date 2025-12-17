@@ -3,7 +3,7 @@ import { Rocket, Github, Mail, Linkedin } from 'lucide-react';
 
 export function CallToAction() {
   const stats = [
-    { value: '2+', label: 'Projetos Completados' },
+    { value: '2+', label: 'Projetos Finalizados' },
     { value: '5+', label: 'Tecnologias Dominadas' },
     { value: '3+', label: 'Anos de Experiência em TI' },
     { value: '100%', label: 'Comprometimento' },
