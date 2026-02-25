@@ -38,7 +38,7 @@ export function Hero() {
           {/* CTA Buttons */}
           <CTAButtons
             onProjectsClick={scrollToProjects}
-            cvHref="/CV%20FABIO%20LEONARDO.pdf"
+            cvHref="/CV-FABIO-LEONARDO.pdf"
           />
 
           {/* Scroll Indicator */}
