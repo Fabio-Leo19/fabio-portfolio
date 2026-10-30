@@ -5,20 +5,36 @@ import { ImageWithFallback } from './shared/ImageWithFallback';
 export function Projects() {
   const projects = [
     {
-      title: 'CashHawk',
-      description: 'App Android de controle financeiro completo com categorização inteligente, gráficos interativos e sincronização em nuvem.',
-      stack: ['Kotlin', 'Jetpack Compose', 'Room', 'Material 3', 'MVVM'],
-      status: 'DEVELOPMENT',
-      github: 'https://github.com/Fabio-Leo19/CashHawk.git',
-      highlight: 'Arquitetura limpa com Room Database',
+      title: 'DevMetrics',
+      description: 'Dashboard responsivo para acompanhar repositórios, atividade e métricas de perfis do GitHub.',
+      stack: ['React', 'TypeScript', 'Vite', 'GitHub API'],
+      status: 'LIVE',
+      github: 'https://github.com/Fabio-Leo19/DevMetrics',
+      highlight: 'Consulta à API e dados em visualizações claras',
     },
     {
-      title: 'ModernCloset',
-      description: 'E-commerce moderno e responsivo para venda de roupas, mochilas e aparelhos eletrônicos. Interface elegante com carrinho de compras e filtros avançados.',
-      stack: ['React', 'TypeScript', 'Tailwind CSS', 'Bootstrap', 'REST API'],
+      title: 'PreçoCerto',
+      description: 'Ferramenta para calcular preço de venda, comparar cenários, gerenciar taxas e salvar dados por usuário.',
+      stack: ['React', 'TypeScript', 'Firebase', 'Firestore'],
       status: 'LIVE',
-      github: 'https://github.com/Fabio-Leo19/Modern-Closet.git',
-      highlight: 'Design responsivo e UX otimizada',
+      github: 'https://github.com/Fabio-Leo19/PrecoCerto',
+      highlight: 'Autenticação, precificação e backup de dados',
+    },
+    {
+      title: 'Modern Closet',
+      description: 'Demonstração de e-commerce com navegação e interface responsiva.',
+      stack: ['React', 'TypeScript', 'CSS'],
+      status: 'LIVE',
+      github: 'https://github.com/Fabio-Leo19/Modern-Closet',
+      highlight: 'Interface de loja virtual',
+    },
+    {
+      title: 'CashHawk',
+      description: 'Aplicativo Android de controle financeiro pessoal, com lançamentos, análises e integração com API. Projeto atualmente em pausa.',
+      stack: ['Kotlin', 'Jetpack Compose', 'Room', 'Spring Boot'],
+      status: 'PAUSADO',
+      github: 'https://github.com/Fabio-Leo19/CashHawk',
+      highlight: 'Android nativo e serviços REST',
     },
   ];
 

@@ -55,20 +55,19 @@ export function About() {
           >
             <div className="border-l-2 border-[#00ff9f] pl-6 space-y-4">
               <p className="font-['Space_Mono'] text-gray-300 text-sm md:text-base leading-relaxed">
-                Desenvolvedor especializado em <span className="text-[#00ff9f]">aplicações backend escaláveis</span> com 
-                Java/Kotlin e <span className="text-[#00ff9f]">desenvolvimento mobile Android nativo</span>. 
-                Experiência sólida em infraestrutura de TI, trazendo perspectiva única para arquitetura de sistemas.
+                Atuo com <span className="text-[#00ff9f]">desenvolvimento Full Stack</span>, criando aplicações web,
+                automações e integrações entre sistemas. Também tenho experiência em
+                <span className="text-[#00ff9f]">Android nativo e infraestrutura de TI</span>.
               </p>
               <p className="font-['Space_Mono'] text-gray-300 text-sm md:text-base leading-relaxed">
-                Construo APIs RESTful com <span className="text-[#8a2be2]">Spring Boot</span>, aplicativos Android modernos com 
-                <span className="text-[#8a2be2]"> Jetpack Compose</span>, e interfaces web responsivas com <span className="text-[#8a2be2]">React e Bootstrap</span>. 
-                Focado em clean code, padrões de design e práticas DevOps.
+                Trabalho com <span className="text-[#8a2be2]">React e TypeScript</span> no front-end,
+                <span className="text-[#8a2be2]"> Python</span> em automações e integrações, além de
+                <span className="text-[#8a2be2]">Java, Spring Boot e Kotlin</span> em APIs e projetos Android.
               </p>
               <p className="font-['Space_Mono'] text-gray-300 text-sm md:text-base leading-relaxed">
-                Formado em <span className="text-[#b300ff]">Front End Design</span> e com background em <span className="text-[#b300ff]">Gestão de TI</span>, 
-                atuo como <span className="text-[#b300ff]">Assistente de TI / Service Desk</span> com experiência prática em 
-                infraestrutura, troubleshooting e monitoramento de sistemas. 
-                Essa base me permite desenvolver soluções mais seguras e bem arquitetadas.
+                Sou formado em <span className="text-[#b300ff]">Análise e Desenvolvimento de Sistemas</span>.
+                Atualmente atuo como <span className="text-[#b300ff]">Programador Júnior</span>, unindo
+                desenvolvimento, conhecimento de processos e experiência anterior em suporte técnico.
               </p>
             </div>
 
@@ -90,7 +89,7 @@ export function About() {
             {/* Status Panel */}
             <div className="border border-[#8a2be2]/30 bg-black/40 p-6 clip-corner relative">
               <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#8a2be2] to-transparent"></div>
-              
+
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-['Space_Mono'] text-xs text-[#8a2be2]">&gt; NÍVEL DE CONHECIMENTO</span>
@@ -123,7 +122,7 @@ export function About() {
                         className="h-full relative"
                         style={{ backgroundColor: stat.color }}
                       >
-                        <div className="absolute inset-0" style={{ 
+                        <div className="absolute inset-0" style={{
                           boxShadow: `0 0 10px ${stat.color}`,
                           opacity: 0.8
                         }}></div>

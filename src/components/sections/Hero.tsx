@@ -38,7 +38,7 @@ export function Hero() {
           {/* CTA Buttons */}
           <CTAButtons
             onProjectsClick={scrollToProjects}
-            cvHref="/CV-FABIO-LEONARDO.pdf"
+            cvHref="/curriculo"
           />
 
           {/* Scroll Indicator */}
@@ -174,9 +174,9 @@ function Description() {
       transition={{ duration: 0.5, delay: 0.6 }}
       className="font-['Space_Mono'] text-sm md:text-base text-gray-500 max-w-2xl mx-auto mb-8"
     >
-      Transformo ideias em aplicações robustas e escaláveis.
+      Desenvolvo aplicações web, automações e integrações para resolver problemas reais.
       <br />
-      Foco em soluções backend de alta performance e apps mobile nativos.
+      Trabalho com React, TypeScript, Python, Java, Kotlin e serviços em nuvem.
     </motion.p>
   );
 }
@@ -206,12 +206,13 @@ function CTAButtons({ onProjectsClick, cvHref }: CTAButtonsProps) {
 
       <a
         href={cvHref}
-        download
+        target="_blank"
+        rel="noopener noreferrer"
         className="group px-8 py-3 border-2 border-[#8a2be2] text-[#8a2be2] font-['Orbitron'] hover:bg-[#8a2be2]/10 transition-all clip-corner relative inline-flex items-center justify-center"
       >
         <span className="flex items-center gap-2">
           <Download className="w-5 h-5" />
-          Download CV
+          Visualizar / baixar CV
         </span>
         <div className="absolute inset-0 border-2 border-[#8a2be2] blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
       </a>

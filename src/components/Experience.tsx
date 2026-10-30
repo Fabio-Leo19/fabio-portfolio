@@ -1,33 +1,10 @@
 import { motion } from 'motion/react';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { useResume } from '../cv/useResume';
 
 export function Experience() {
-  const experiences = [
-    {
-      role: 'Assistente de TI / Service Desk N1/N2',
-      company: 'Salutem Móveis Hospitalares',
-      location: 'São Paulo, SP',
-      period: 'Ago/2024 – Atual',
-      responsibilities: [
-        'Suporte Estratégico e Estabilidade: Atuo na linha de frente do Suporte Técnico (Help Desk)',
-        'Diagnóstico e Ação Rápida: Responsável pelo diagnóstico e resolução de incidentes críticos da Infraestrutura de tecnologia da informação',
-        'Gestão de Chamados e Usuários: Forte atuação no atendimento a usuários, realizando troubleshooting eficiente e manutenção de equipamentos',
-        'Compromisso e Melhoria Contínua: Comprometido em manter um ambiente tecnológico seguro e eficiente',
-      ],
-    },
-    {
-      role: 'Desenvolvedor Full Stack & Mobile (Projetos)',
-      company: 'Freelance & Projetos Pessoais',
-      location: 'Remote',
-      period: '2023 – Atual',
-      responsibilities: [
-        'Desenvolvimento de APIs REST com Spring Boot, implementando autenticação JWT e validação de dados',
-        'Criação de aplicativos Android nativos com Kotlin, Jetpack Compose e arquitetura MVVM',
-        'Desenvolvimento de interfaces web responsivas com React, TypeScript e Bootstrap',
-        'Integração com bancos de dados PostgreSQL, MySQL e Room para persistência local',
-      ],
-    },
-  ];
+  const { resume } = useResume();
+  const experiences = resume.experiences;
 
   return (
     <section id="experiencia" className="py-20 lg:py-32 relative bg-black/20">
@@ -126,7 +103,7 @@ export function Experience() {
                   </ul>
 
                   {/* Status Indicator */}
-                  {index === 0 && (
+                  {exp.period.toLowerCase().includes('atual') && (
                     <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 border border-[#00ff9f]/30 bg-[#00ff9f]/5">
                       <div className="w-2 h-2 bg-[#00ff9f] rounded-full pulse-glow"></div>
                       <span className="font-['Space_Mono'] text-xs text-[#00ff9f]">ATUAL</span>
